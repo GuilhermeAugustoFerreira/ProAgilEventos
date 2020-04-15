@@ -11,7 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using ProAgil.API.Data;
+using ProAgil.Repository;
+//using ProAgil.API.Data;
 
 namespace ProAgil.API
 {
@@ -27,7 +28,7 @@ namespace ProAgil.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(x => x.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ProAgilContext>(x => x.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             /*Acessar Nuget pelo VsCode:
             Install Nuget Gallery from extension marketplace.
             Launch from the menu bar View > Command Palette or ⇧⌘P (Ctrl+Shift+P on Windows and Linux). Type Nuget: Open Gallery .
