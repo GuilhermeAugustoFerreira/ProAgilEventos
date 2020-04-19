@@ -43,6 +43,7 @@ namespace ProAgil.API
                 "DefaultConnection": "Data Source = ..."
             }
             */
+            services.AddScoped<IProAgilRepository, ProAgilRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddCors();//configuração de permissao de requisição cruzada
         }

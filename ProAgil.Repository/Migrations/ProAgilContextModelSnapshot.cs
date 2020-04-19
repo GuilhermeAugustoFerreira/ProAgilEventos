@@ -52,9 +52,9 @@ namespace ProAgil.Repository.Migrations
 
                     b.Property<int>("EventoId");
 
-                    b.Property<int>("Nome");
+                    b.Property<string>("Nome");
 
-                    b.Property<int>("Preco");
+                    b.Property<float>("Preco");
 
                     b.Property<int>("quantidade");
 
